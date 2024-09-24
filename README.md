@@ -51,3 +51,7 @@
 
  export const Component;
  import {Component} from "path"
+
+ # 2 Types Routing in web apps
+ - Client Side Routing
+ - Server Side Routing
