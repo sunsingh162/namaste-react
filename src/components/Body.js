@@ -23,7 +23,6 @@ const Body = () => {
       const swiggyResLists =
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants;
-      console.log(swiggyResLists);
       setListOfRestaurants(swiggyResLists);
       setFilteredRestaurant(swiggyResLists);
     } catch (err) {
