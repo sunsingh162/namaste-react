@@ -3,7 +3,6 @@ import { RES_API_URL } from "./constants";
 
 const useRestaurantLists = () => {
   const [listOfRestaurants, setListOfRestaurants] = useState([]);
-  const [filteredRestaurant, setFilteredRestaurant] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -18,14 +17,13 @@ const useRestaurantLists = () => {
         json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
           ?.restaurants;
       setListOfRestaurants(swiggyResLists);
-      setFilteredRestaurant(swiggyResLists);
     } catch (err) {
       console.log("Error", err);
     } finally {
       setLoading(false);
     }
   };
-  return { listOfRestaurants, filteredRestaurant, loading };
+  return { listOfRestaurants, loading };
 };
 
 export default useRestaurantLists;
